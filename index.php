@@ -17,14 +17,47 @@
                 <div class="spacial-title-text"></div>
             </div>
             <div class="section-description">
-                Yes!!
+                WE’RE A CLOSE TEAM OF CREATIVES,
+DESIGNERS & DEVELOPERS WHO WORK
+TOGETHER TO CREATE BEAUTIFUL,
+ENGAGING DIGITAL EXPERIENCES.
             </div>
         </div>
-    </div>
+        
+        <div class="section-container about-detail">
+            <div class="container">
+                <div class="about-item-container">
+                    <div class="about-item first-item">
+                        <div class="about-title">WHAT WE DO.</div>
+                        <div class="about-description">
+                        	Create value for customer,
+							Breaking old world with imagine of us.
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-title">WHAT WE ACHIEVE.</div>
+                        <div class="about-description">
+                        	Change ideas, Change imagine,
+							Change The world by IMAGE OF US.
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-title">WHY CHOOSE US</div>
+                        <div class="about-description">
+                        	We work in cycles. Build something nimble
+							and let it grow, gradually, into something huge.
+                       	</div>     
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <!--about-->
+    
     <div class="section" id="media">
         <div class="section-header">
             <div class="spacial-title">
-                <div class="spacial-title-bg"></div>
+               <div class="spacial-title-bg"></div>
                 <div class="spacial-title-text"></div>
             </div>
             <div class="section-description">
@@ -69,7 +102,26 @@
                 <div class="lest-talk-btn show-contact-btn">let’s Talk</div>
             </div>
         </div>
+        
+    <!--<div class="sub-section">
+        	<div class="logo-text"></div>
+        	<div class="taxi-item" id="taxi">
+            	<div class="taxi-title">
+                	Digital wifi advertising for taxi
+            	</div>
+           		<div class="view-more-btn noselect">View More</div>
+        	</div>
+       		<div class="van-item" id="van">
+            	<div class="van-title">
+            		Digital wifi advertising for Van
+            	</div>
+               	<div class="view-more-btn noselect">View More</div>
+         	</div>
+        </div>-->
+        <!--service van and taxi -->
     </div>
+    <!--media-->
+    
     <div class="section" id="investor">
         <div class="section-header">
             <div class="spacial-title">
@@ -84,6 +136,7 @@
                 from that in economics.
             </div>
         </div>
+        
         <div class="section-container">
             <div class="parallax parallax1">
                 <div class="parallax-bg"></div>
@@ -110,6 +163,8 @@
             </div>
         </div>
     </div>
+    <!--investor-->
+    
     <div class="section" id="our-clients">
         <div class="section-header">
             <div class="spacial-title">
@@ -121,6 +176,8 @@
             </div>
         </div>
     </div>
+    <!--our-clients-->
+    
     <div id="logo"></div>
     <div id="back"></div>
     <div id="contact">
@@ -153,7 +210,10 @@
             </div>
         </div>
     </div>
+    <!--contact-->
 </div>
+<!--end-->
+
 
 <script>
 var Page = (function(){
