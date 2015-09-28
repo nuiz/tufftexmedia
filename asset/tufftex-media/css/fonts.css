@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Cocogoose';
+    src: url('fonts/Cocogoose_trial.otf');
+}
+
+@font-face {
+    font-family: 'TH_K2D_July8';
+    src: url('fonts/TH K2D July8.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH_K2D_July8';
+    src: url('fonts/TH K2D July8 Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH_K2D_July8';
+    src: url('fonts/TH K2D July8 Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH_K2D_July8';
+    src: url('fonts/TH K2D July8 Bold Italic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}

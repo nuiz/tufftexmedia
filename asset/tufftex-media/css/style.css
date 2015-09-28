@@ -1,0 +1,652 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html * {max-height:1000000px;}
+
+/******** helper class *******/
+
+.clearfix {
+    clear: both;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/********************** Tufftex media style *********************/
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Cocogoose, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.75em;
+    overflow: hidden;
+}
+
+#back {
+    background: url(images/close-btn.jpg);
+    width: 53px;
+    height: 53px;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    display: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#back.active {
+    transition-delay: 1s;
+    display: block;
+    opacity: 1;
+}
+
+#page-container {
+    box-sizing: border-box;
+    border: 10px solid #333;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    background-image: url(images/logo.png);
+    width: 241px;
+    height: 241px;
+    top: 50%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -120px;
+    transition: 0.5s ease;
+    z-index: 5;
+}
+
+.section {
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    transition: width 0.5s ease, height 0.5s ease, transform 0.5s ease;
+}
+
+.section.active {
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: white;
+    overflow: auto;
+}
+
+.section.inactive {
+    width: 0;
+    height: 0;
+}
+
+.section-header {
+    height: 100%;
+}
+
+.section.active .section-header {
+    height: 500px;
+}
+
+.spacial-title {
+    height: 100%;
+}
+
+#media.section {
+    top: 0; right: 0;
+}
+
+#media.section.inactive {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#about.section {
+    top: 0; left: 0;
+}
+
+#about.section.inactive {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#investor.section {
+    bottom: 0; left: 0;
+}
+
+#investor.section.inactive {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#our-clients.section {
+    bottom: 0; right: 0;
+}
+
+#our-clients.section.inactive {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.section .spacial-title {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+#media.section .spacial-title {
+    background: url(images/media.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#media.section .spacial-title .spacial-title-bg {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+#media.section .spacial-title .spacial-title-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    margin-left: -99px;
+    margin-top: -56px;
+    background: url(images/media-text.png);
+    width: 198px;
+    height: 111px;
+}
+
+#about.section .spacial-title .spacial-title-bg {
+    background: white;
+    width: 100%;
+    height: 100%;
+}
+
+#about.section .spacial-title .spacial-title-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    margin-left: -93px;
+    margin-top: -56px;
+    background: url(images/about-text.png);
+    width: 193px;
+    height: 111px;
+}
+
+#investor.section .spacial-title .spacial-title-bg {
+    background: #ebebeb;
+    width: 100%;
+    height: 100%;
+}
+
+#investor.section .spacial-title .spacial-title-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    margin-left: -67px;
+    margin-top: -74px;
+    background: url(images/investor-text.png);
+    width: 134px;
+    height: 147px;
+}
+
+#our-clients.section .spacial-title .spacial-title-bg {
+    background: #dddddd;
+    width: 100%;
+    height: 100%;
+}
+
+#our-clients.section .spacial-title .spacial-title-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    margin-left: -85px;
+    margin-top: -74px;
+    background: url(images/our-clients-text.png);
+    width: 170px;
+    height: 147px;
+}
+
+.section:not(.active) .spacial-title:hover .spacial-title-bg {
+    transition: background 0.3s;
+    background: #7cedd7 !important;
+}
+
+.section.active .spacial-title {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.section.active .section-description {
+    visibility: visible;
+}
+.section .section-description {
+    font-family: "TH_K2D_July8", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 33pt;
+    font-weight: bold;
+    width: 50%;
+    height: 100%;
+    float: right;
+    background: #229ea1;
+    padding: 160px 77px 40px 80px;
+    box-sizing: border-box;
+    line-height: 40px;
+
+    visibility: hidden;
+}
+
+.section-title {
+    display: block;
+    width: 100%;
+    margin-bottom: 22px;
+    text-align: center;
+    margin-top: 50px;
+}
+.section h2 {
+    font-family: "TH_K2D_July8", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 33pt;
+    font-weight: bold;
+    color: #6d6d6d;
+
+    display: inline-block;
+    background: #fff;
+    padding: 3px 24px;
+    margin: 0;
+}
+.section-title::after {
+    content: "";
+    height: 1px;
+    display: inline-block;
+    background: #d7d7d7;
+    width: 100%;
+    position: relative;
+    top: -37px;
+    z-index: -1;
+}
+
+.section-container {
+    display: none;
+    background: white;
+}
+
+.section.active .section-container {
+    display: block;
+}
+
+#media .container {
+    width: 950px;
+    margin: 0 auto;
+}
+#media .media-item-container {
+    height: 227px;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 76px;
+}
+
+#media .media-item {
+    width: 315px;
+    height: 227px;
+    border-left: 1px solid #d7d7d7;
+    float: left;
+    text-align: center;
+}
+
+#media .media-item.first-item {
+    border-left: none;
+}
+
+#media .media-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 44px;
+}
+
+#media .media-description {
+    font-family: "TH_K2D_July8", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+#media .view-more-btn {
+    font-family: "TH_K2D_July8", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    padding:  3px 17px;
+    border: 1px solid #333333;
+    border-radius: 2px;
+    margin-top: 20px;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.lest-talk-container {
+    width: 100%;
+    text-align: center;
+    background: #eaeaea;
+    padding: 80px 0 60px 0;
+}
+
+.lest-talk-title {
+    font-size: 41px;
+    color: #333333;
+}
+
+.lest-talk-btn {
+    font-size: 24px;
+    color: #ffffff;
+    font-family: "TH_K2D_July8", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    background: #00aeab;
+    padding: 5px 22px 10px 22px;
+    margin-top: 40px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+/******* contact *******/
+#contact {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(373px);
+}
+
+
+#contact .contact-container {
+    width: 950px;
+    margin: 0 auto;
+    padding-top: 32px;
+}
+
+#contact .contact-form {
+    width: 360px;
+    padding: 0 20px;
+    float: left;
+}
+
+#contact.active {
+    transform: none;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="password"],
+.contact-form input[type="date"],
+.contact-form input[type="datetime"],
+.contact-form input[type="datetime-local"],
+.contact-form input[type="month"],
+.contact-form input[type="week"],
+.contact-form input[type="email"],
+.contact-form input[type="number"],
+.contact-form input[type="search"],
+.contact-form input[type="tel"],
+.contact-form input[type="time"],
+.contact-form input[type="url"],
+.contact-form textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    margin: 0 0 1rem 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: border-color 0.15s linear, background 0.15s linear;
+    -moz-transition: border-color 0.15s linear, background 0.15s linear;
+    -ms-transition: border-color 0.15s linear, background 0.15s linear;
+    -o-transition: border-color 0.15s linear, background 0.15s linear;
+    transition: border-color 0.15s linear, background 0.15s linear;
+
+    padding: 0 30px;
+    height: 29px;
+    margin-bottom: 12px;
+    background: none;
+    border: 1px solid #555;
+    color: #fff;
+
+    font-family: "TH_K2D_July8", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 19pt;
+
+    line-height: 23px;
+    outline: none;
+}
+
+.contact-form textarea {
+    padding: 0 30px;
+    height: 138px;
+    resize: none;
+}
+
+.contact-info h4 {
+    font-size: 10pt;
+    color: #fff;
+    letter-spacing: 4px;
+    font-weight: normal;
+    line-height: 10px;
+}
+
+.contact-info p {
+    font-family: "TH_K2D_July8", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14pt;
+    font-weight: normal;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    margin-bottom: 30px;
+    color: #999;
+}
+
+#contact .contact-info {
+    width: 480px;
+    padding: 0 10px;
+    float: left;
+    color: white;
+}
+
+.contact-toggle-btn {
+    background-color: #333333;
+    width: 86px;
+    border-radius: 7px 7px 0 0;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    height: 19px;
+    font-size: 10pt;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.contact-toggle-btn:hover {
+    color: #229ea1;
+}
+
+.contact-body {
+    width: 100%;
+    height: 373px;
+    background-color: #333333;
+}
+
+.social-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url("images/social-button.jpg");
+}
+
+.social-icon.social-icon-facebook {
+    background-position: 0 0;
+}
+
+.social-icon.social-icon-twitter {
+    background-position: 16px 0;
+}
+
+.social-icon.social-icon-google_plus {
+    background-position: 32px 0;
+}
+
+.social-icon.social-icon-rss {
+    background-position: 48px 0;
+}
+
+.social-icon.social-icon-pinterest {
+    background-position: 64px 0;
+}
+
+.social-list {
+    margin-top: 7px;
+}
+
+/***************** investor ******************/
+.parallax1 {
+    height: 200px;
+    position: relative;
+}
+
+.parallax1 .parallax-bg {
+    width: 100%;
+    height: 100%;
+    background: url("images/parallax1.jpg");
+    background-size: cover;
+}
+
+.parallax1 .parallax-description {
+    position: absolute;
+    color: white;
+    font-size: 29px;
+    text-align: center;
+    line-height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-top: -51px;
+    margin-left: -490px;
+    text-shadow: 0 1px 2px #000;
+}
+
+#investor .divider {
+    width: 540px;
+    height: 1px;
+    margin: 50px auto;
+    background: #29a1a4;
+}
+
+#investor .detail1 {
+    text-align: center;
+    font-family: "TH_K2D_July8", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 33px;
+    font-weight: bold;
+    color: #333333;
+}
+
+@media only screen 
+    and (max-device-width: 640px), 
+    only screen and (max-device-width: 667px), 
+    only screen and (max-width: 480px)
+{
+    .section.active .section-header {
+        height: auto;
+    }
+    .section.active .spacial-title {
+        height: 500px;
+        float: none;
+        width: 100%;
+    }
+    .section.active .section-description {
+        height: auto;
+        padding: 80px;
+        text-align: center;
+        float: none;
+        width: 100%;
+    }
+
+    #media .media-item-container {
+        height: auto;
+        border: 1px solid #d7d7d7;
+        margin: 0 100px;
+        margin-bottom: 76px;
+    }
+
+    #media .media-item {
+        float: none;
+        width: auto;
+        height: auto;
+        border: none;
+        border-top: 1px solid #d7d7d7;
+    }
+
+    #media .media-item.first-item {
+        border: none;
+        height: auto;
+    }
+
+    #investor .detail1 {
+        margin: 0 100px;
+    }
+
+    br.hide-mobile {
+        display: none;
+    }
+}
+
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+    .section.active .section-description {
+        padding: 80px;
+        font-size: 25pt;
+    }
+}
